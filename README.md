@@ -9,18 +9,18 @@ An SCP SL plugin used to add extra RA buttons to set up roles.
 5. Configure roles in the DummySetupRoles.yaml file. Once you have configured the roles, restart the server for them to take effect.
 
 ## On Role Set Commands
-The following will be replaced with certain values determined at runtime when put into a command to be executed when the role is set.
-"The player" references the player who's role is being set.
+The following will be replaced with certain values determined at runtime when put into a command to be executed when the role is set.\
+"The player" references the player who's role is being set.<br>
 
-%PLAYERID% - The id of the player.
-%PLAYERDISPLAYNAME% - The display nickname of the player.
-%PLAYERNAME% - The name of the player. This is independent from any nickname set in SL.
-%PLAYERUSERID% - The steam64 id of the player.
-%PLAYERIP% - The IP Address of the player.
-%ROLENAME% - The name of the role that the player is being set to.
-%CATEGORY% - The category of the role that the player is being set to.
+%PLAYERID% - The id of the player.\
+%PLAYERDISPLAYNAME% - The display nickname of the player.\
+%PLAYERNAME% - The name of the player. This is independent from any nickname set in SL.\
+%PLAYERUSERID% - The steam64 id of the player.\
+%PLAYERIP% - The IP Address of the player.\
+%ROLENAME% - The name of the role that the player is being set to.\
+%CATEGORY% - The category of the role that the player is being set to.\
 
 ## Dependencies
-[https://github.com/Bankokwak/RaCustomMenu]
-RACustomMenu is Copyright (c) 2025 Bankokwak
+[https://github.com/Bankokwak/RaCustomMenu]\
+RACustomMenu is Copyright (c) 2025 Bankokwak\
 
