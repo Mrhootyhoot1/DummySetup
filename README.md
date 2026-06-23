@@ -18,7 +18,7 @@ The following will be replaced with certain values determined at runtime when pu
 %PLAYERUSERID% - The steam64 id of the player.\
 %PLAYERIP% - The IP Address of the player.\
 %ROLENAME% - The name of the role that the player is being set to.\
-%CATEGORY% - The category of the role that the player is being set to.\
+%CATEGORY% - The category of the role that the player is being set to.
 
 ## Dependencies
 [https://github.com/Bankokwak/RaCustomMenu]\
