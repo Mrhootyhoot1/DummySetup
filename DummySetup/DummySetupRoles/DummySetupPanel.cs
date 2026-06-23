@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Copyright (c) 2026 Mrhootyhoot1. All rights reserved.
+ * https://github.com/Mrhootyhoot1/DummySetup
+ */
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;

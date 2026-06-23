@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Copyright (c) 2026 Mrhootyhoot1. All rights reserved.
+ * https://github.com/Mrhootyhoot1/DummySetup
+ */
+
+using System;
 using System.Collections.Generic;
 using DummySetup.API.Features;
 using Exiled.API.Features;
@@ -11,7 +16,6 @@ namespace DummySetup.DummySetupRoles
 	{
 		private List<RPRole> _roles;
 		public override string CategoryName { get; }
-		internal static List<DummyAction> CreatedActions { get; private set; } = new List<DummyAction>();
 
 		public DummyRoleCreator(string categoryName, List<RPRole> roles)
 		{
@@ -33,7 +37,6 @@ namespace DummySetup.DummySetupRoles
 					role.Apply(Player.Get(hub));
 				}));
 			}
-			CreatedActions.AddRange(dummyAction);
 			return dummyAction;
 		}
 		

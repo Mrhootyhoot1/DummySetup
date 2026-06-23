@@ -1,4 +1,9 @@
-﻿using System.IO;
+﻿/*
+ * Copyright (c) 2026 Mrhootyhoot1. All rights reserved.
+ * https://github.com/Mrhootyhoot1/DummySetup
+ */
+
+using System.IO;
 using Exiled.API.Features;
 using Exiled.API.Interfaces;
 

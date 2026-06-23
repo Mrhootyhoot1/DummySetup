@@ -1,13 +1,14 @@
-﻿using System;
+﻿/*
+ * Copyright (c) 2026 Mrhootyhoot1. All rights reserved.
+ * https://github.com/Mrhootyhoot1/DummySetup
+ */
+
 using System.Collections.Generic;
 using System.Linq;
 using Exiled.API.Enums;
 using Exiled.API.Features;
 using Exiled.CustomItems.API.Features;
-using Exiled.Events.Handlers;
 using PlayerRoles;
-using UnityEngine;
-using YamlDotNet.Serialization;
 using Player = Exiled.API.Features.Player;
 using Server = Exiled.API.Features.Server;
 
