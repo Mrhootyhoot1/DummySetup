@@ -4,7 +4,7 @@ An SCP SL plugin used to add extra RA buttons to set up roles.
 ## Installation 
 1. Download the latest release found here [https://github.com/Mrhootyhoot1/DummySetup/releases] and drop the file into {PATHTOEXILED}/Plugins.
 2. Download the RA Custom Menu plugin's exiled release here [https://github.com/Bankokwak/RaCustomMenu/releases/tag/1.1.1] (this version in particular) and drop the file into {PATHTOEXILED}/Plugins.
-3. Add the permission "rcm.actions" to any roles you wish to have the ability to use the buttons created by this plugin to your permissions file.
+3. Add the permission "rcm.action" to any roles you wish to have the ability to use the buttons created by this plugin to your permissions file.
 4. Restart your server. This will generate a default config file with an example role at the path {PATHTOEXILED}/Configs/DummySetup/DummySetupRoles.yaml.
 5. Configure roles in the DummySetupRoles.yaml file. Once you have configured the roles, restart the server for them to take effect.
 
