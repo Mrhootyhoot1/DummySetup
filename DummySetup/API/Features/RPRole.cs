@@ -1,16 +1,18 @@
-﻿/*
+/*
  * Copyright (c) 2026 Mrhootyhoot1. All rights reserved.
  * https://github.com/Mrhootyhoot1/DummySetup
  */
 
+using System;
 using System.Collections.Generic;
 using System.Linq;
+using CommandSystem;
 using Exiled.API.Enums;
 using Exiled.API.Features;
 using Exiled.CustomItems.API.Features;
 using PlayerRoles;
+using RemoteAdmin;
 using Player = Exiled.API.Features.Player;
-using Server = Exiled.API.Features.Server;
 
 namespace DummySetup.API.Features
 {
@@ -74,8 +76,32 @@ namespace DummySetup.API.Features
 
 			foreach (string command in RunCommandOnSet)
 			{
-				Server.ExecuteCommand(FormatCommand(command, player));
+				ExecuteRemoteAdminCommand(FormatCommand(command, player));
 			}
+		}
+
+		private void ExecuteRemoteAdminCommand(string commandLine)
+		{
+			if (string.IsNullOrWhiteSpace(commandLine))
+				return;
+
+			string[] parts = commandLine.Trim().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+			if (parts.Length == 0)
+				return;
+
+			if (!CommandProcessor.RemoteAdminCommandHandler.TryGetCommand(parts[0], out ICommand command))
+			{
+				Log.Error($"[RPRole] Unknown Remote Admin command in role {RoleName}: {commandLine}");
+				return;
+			}
+
+			ArraySegment<string> arguments = new ArraySegment<string>(parts, 1, parts.Length - 1);
+			bool success = command.Execute(arguments, new ServerConsoleSender(), out string response);
+
+			if (!success)
+				Log.Error($"[RPRole] Command failed for role {RoleName}: {commandLine} | {response}");
+			else if (!string.IsNullOrWhiteSpace(response))
+				Log.Debug($"[RPRole] Command executed for role {RoleName}: {commandLine} | {response}");
 		}
 
 		private string FormatCommand(string command, Player player)
