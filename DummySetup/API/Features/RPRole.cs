@@ -34,6 +34,8 @@ namespace DummySetup.API.Features
 		{
 			player.RoleManager.ServerSetRole(RoleType, RoleChangeReason.None, RoleSpawnFlags.None);
 			
+			player.ClearInventory();
+			
 			foreach (var item in LoadOut.Where(i => i != ItemType.None))
 			{
 				if (player.Items.Count >= 8)
